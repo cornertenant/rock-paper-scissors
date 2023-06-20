@@ -1,0 +1,7 @@
+function getPlayerChoice()
+	choice = prompt for input
+	return choice
+
+function playTheGame(getPlayerChoice, getComputerChoice)
+	if playerChoice = rock 
+	-- TO BE CONTINUED --
