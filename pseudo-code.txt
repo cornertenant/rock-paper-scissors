@@ -2,6 +2,36 @@ function getPlayerChoice()
 	choice = prompt for input
 	return choice
 
-function playTheGame(getPlayerChoice, getComputerChoice)
-	if playerChoice = rock 
-	-- TO BE CONTINUED --
+function playTheGame(playerChoice, computerChoice)
+	if computerChoice = rock && playerChoice = scissors
+		computer wins
+	if computerChoice = scissors && playerChoice = paper
+		computer wins
+	if computerChoice = paper && playerChoice = rock
+		computer wins
+
+	if computerChoice = rock && playerChoice = rock
+		tie
+	if computerChoice = scissors && playerChoice = scissors
+		tie
+	if computerChoice = paper && playerChoice = paper
+		tie
+
+	if computerChoice = rock && playerChoice = paper
+		player wins
+	if computerChoice = paper && playerChoice = scissors
+		player wins
+	if computerChoice = scissors && playerChoice = rock
+		player wins
+
+
+function playGame 5 times
+
+let score = 0
+	playround (return win or lose)
+		if playround = win
+			return 1 point
+		else if playeround = lose
+			reutnr -1 point
+		else
+			playround again
