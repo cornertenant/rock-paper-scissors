@@ -1,4 +1,5 @@
-let score = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 // random choice for coomputer //
 function getComputerChoice(){
@@ -41,13 +42,13 @@ function getPlayerChoice(){
 // winning message and updateing score //
 function win(winner, loser){
     console.log(`${winner} beats ${loser}. You win!`)
-    score++;
+    playerScore++;
 }
 
 // losing message and updating score //
 function lose(loser, winner){
     console.log(`${loser} is beaten by ${winner}. You lose!`)
-    score--;
+    computerScore++;
 }
 
 // play a single round //
@@ -85,8 +86,17 @@ function playGame(){
     
     for (let i = 0; i < 5; i++){
         playRound(getPlayerChoice(), getComputerChoice());
-        console.log(score);
     }
+    console.log(playerScore);
+    console.log(computerScore);
+    if (playerScore > computerScore){
+        console.log("Player wins!")
+    }
+    else if (playerScore < computerScore){
+        console.log("Computer wins!")
+    }
+    else
+        console.log("It a tie!")
 }
 
 playGame();
