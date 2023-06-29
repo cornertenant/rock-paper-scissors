@@ -46,17 +46,28 @@ function playRound(player, computer){
         return;
 }
 
+function updateScore(playerSc, computerSc){                     // PROBLEM: Displays a new line every time.
+    const scoreBoard = document.querySelector(".scoreBoard");
+
+    const content = document.createElement("div");
+    content.classList.add("content");
+    content.textContent = `Player: ${playerSc} VS Computer: ${computerSc}`;
+
+    scoreBoard.appendChild(content);
+
+}
+
 document.querySelector("#btn-rock").addEventListener("click", function() {
     playRound("rock", getComputerChoice());
-    console.log(`the scores are: player - ${playerScore} & computer - ${computerScore}`);
+    updateScore(playerScore, computerScore);
 });
 
 document.querySelector("#btn-paper").addEventListener("click", function(){
     playRound("paper", getComputerChoice());
-    console.log(`the scores are: player - ${playerScore} & computer - ${computerScore}`);
+    updateScore(playerScore, computerScore);
 });
 
 document.querySelector("#btn-scissors").addEventListener("click", function(){
     playRound("paper", getComputerChoice());
-    console.log(`the scores are: player - ${playerScore} & computer - ${computerScore}`);
+    updateScore(playerScore, computerScore);
 });
