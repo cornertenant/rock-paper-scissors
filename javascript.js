@@ -1,7 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
-// random choice for coomputer //
+// random choice for computer //
 function getComputerChoice(){
 
     let computerChoice = "computer's choice"
@@ -18,6 +18,8 @@ function getComputerChoice(){
     else
         computerChoice = "scissors";
         return computerChoice;
+
+    
 }
 
 // choice of the player //
@@ -39,7 +41,7 @@ function getPlayerChoice(){
 
 }
 
-// winning message and updateing score //
+// winning message and updating score //
 function win(winner, loser){
     console.log(`${winner} beats ${loser}. You win!`)
     playerScore++;
@@ -90,10 +92,10 @@ function playGame(){
     console.log(playerScore);
     console.log(computerScore);
     if (playerScore > computerScore){
-        console.log("Player wins!")
+        console.log(`Player wins! player & computer scores: ${playerScore} - ${computerScore}`);
     }
     else if (playerScore < computerScore){
-        console.log("Computer wins!")
+        console.log(`Computer wins! player & computer scores: ${playerScore} - ${computerScore}`);
     }
     else
         console.log("It a tie!")
